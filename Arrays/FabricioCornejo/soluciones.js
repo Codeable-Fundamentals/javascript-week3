@@ -74,8 +74,14 @@ console.log(ordenarDescendente([50, 10, 30, 5, 80, 1])); // [80, 50, 30, 10, 5, 
 //Ejercicio 8
 function contarNombres(array) {
   let nombresCont = { }
-  for (let i in array){
-    //array[i]
+  for (let i of array){
+    if (nombresCont[i]){
+        nombresCont[i]++;
+        console.log(nombresCont);
+    } else {
+        nombresCont[i] = 1;
+        console.log(nombresCont);
+    }
   }
   return nombresCont
 }
