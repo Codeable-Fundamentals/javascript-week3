@@ -14,11 +14,18 @@ function obtenerPrimerosTres(array) {
 
 console.log(obtenerPrimerosTres(["a", "b", "c", "d", "e"])); 
 
-// function encontrarPrimerPar(array) {
-//     return array.
-// }
+console.log("ejercicio 3")
 
-// console.log(encontrarPrimerPar([7, 9, 12, 15, 20])); // 12
+
+function encontrarPrimerPar(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      return array[i];
+    }
+  }
+}
+
+console.log(encontrarPrimerPar([7, 9, 11, 15, 21])); // 12
 
 console.log("ejercicio 4")
 
@@ -69,7 +76,7 @@ function encontrarPalabraMasLarga(array) {
     }
   }
 
-  return palabraMasLarga;
+  return palabralarga;
 }
 
-console.log(encontrarPalabraMasLarga(["elefante", "gato", "mariposa", "tigre"])); // "elefante"
+console.log(encontrarPalabraMasLarga(["elefante", "gato", "mariposa","murcielago", "tigre"])); // "elefante"

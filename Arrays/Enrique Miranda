@@ -1,0 +1,30 @@
+// ejercicio Número 2 - Desarrolla una función que reciba un array y devuelva un nuevo array con los tres primeros elementos.
+
+//function primerosTres(array) {
+ // return array.slice(0, 3);
+//}
+
+//const numeros = [1, 2, 3, 4, 5];
+//const resultado = primerosTres(numeros);
+//console.log(resultado); // [1, 2, 3]
+
+// ejercicio Número 3 - Desarrolla una función que reciba un array y devuelva el primer número par.
+
+//function primerPar(array) {
+  //return array.find(num => num % 2 === 0);
+//}
+//console.log(primerPar([1, 3, 7, 4, 9])); 
+//console.log(primerPar([1, 3, 7, 9]));    
+//console.log(primerPar([2, 4, 6]));       
+
+// ejecicio numero 4 - Desarrolla una funcion que reciba un array y un numero, y que me devuelva el mismo array filtrado, con los elementos que son mayores al numero pasado.
+
+//function filtrarMayores(array, numero) {
+ // return array.filter(elemento => elemento > numero);
+//}
+//console.log(filtrarMayores([1, 5, 8, 3, 10], 5)); 
+//console.log(filtrarMayores([2, 3, 4], 4));        
+//console.log(filtrarMayores([10, 20, 30], 15));
+
+// ejercicio numero 5 - 
+

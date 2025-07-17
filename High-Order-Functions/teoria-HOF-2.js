@@ -10,3 +10,4 @@ const res = saludar();
 
 console.log("Sin (): ",res)
 console.log("Con (): ",res())
+console.log(saludar()())
