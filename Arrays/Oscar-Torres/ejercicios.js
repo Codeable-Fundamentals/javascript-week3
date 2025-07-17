@@ -61,11 +61,11 @@ function contarNombres(array) {
 console.log("ejercicio 9")
 
 function encontrarPalabraMasLarga(array) {
-  let palabraMasLarga = "";
+  let palabralarga = "";
 
   for (let palabra of array) {
-    if (palabra.length > palabraMasLarga.length) {
-      palabraMasLarga = palabra;
+    if (palabra.length > palabralarga.length) {
+      palabralarga = palabra;
     }
   }
 
