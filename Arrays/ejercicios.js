@@ -1,7 +1,7 @@
 function agregarComidaRapida(array) {
   // tu código aquí
   array.unshift("🍕");
-  array.push("🍔")
+  array.push("🍔");
 
   return array;
 }
