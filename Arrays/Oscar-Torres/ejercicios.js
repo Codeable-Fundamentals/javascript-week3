@@ -69,7 +69,7 @@ function encontrarPalabraMasLarga(array) {
     }
   }
 
-  return palabraMasLarga;
+  return palabralarga;
 }
 
 console.log(encontrarPalabraMasLarga(["elefante", "gato", "mariposa", "tigre"])); // "elefante"
