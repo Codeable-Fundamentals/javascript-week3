@@ -1,3 +1,5 @@
+class Animal {}
+
 class Transporte {
   constructor() {}
 
@@ -25,3 +27,9 @@ console.log(avion.apagar());
 console.log(Transporte.cargarCombustible("Diesel")); // Llamada correcta al método estático
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
+
+// carro.cargarCombustible() // Error: NO XISTE
+ 
+console.log(carro.constructor.name)
+console.log(barco instanceof Animal)
+console.log(barco instanceof Transporte)
