@@ -29,6 +29,10 @@ for (const propiedad in BWM) {
   console.log(`Propiedad: ${propiedad}, Valor: ${BWM[propiedad]}`);
 }
 
+console.log("-------------Obteniendo el prototype INSTANCIA FUNCION CONTRUCTORA ------")
+
+console.log(Object.getPrototypeOf(BWM))
+
 console.log("-----------Ejemplo con clases ---------");
 
 // const boeing = new Avion("Boeing 737", 2007);
@@ -59,6 +63,9 @@ const boeing = new Avion("Boeing 737", 2007);
 for (const propiedad in boeing) {
   console.log(`Propiedad: ${propiedad}, Valor: ${boeing[propiedad]}`);
 }
+
+console.log("-------------Obteniendo el prototype INSTANCIA CLASE ------")
+console.log(Object.getPrototypeOf(boeing))
 
 console.log("-----------llamar a una clase sin la palabra new --------");
 
