@@ -69,8 +69,7 @@ console.log(sumarElementos([4, 7, 10, 25])); // 46
 console.log("-------Ejercicio 7-------")
 //Ejercicio 7
 function ordenarDescendente(array) {
-    array.sort();
-    array.reverse();
+    array.sort((a,b)=> b-a);
     return array;
 }
 console.log(ordenarDescendente([50, 100, 10, 30, 5, 80, 1])); // [100, 80, 50, 30, 10, 5, 1]
