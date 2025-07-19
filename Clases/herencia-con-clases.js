@@ -18,7 +18,7 @@ class Human {
 
 class Mujer extends Human {
   constructor(name, age) {
-    super(); // Llama al constructor de la clase padre
+    super();
     this.name = name;
     this.age = age;
   }
