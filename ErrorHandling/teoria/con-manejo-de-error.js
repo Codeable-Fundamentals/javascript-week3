@@ -5,7 +5,7 @@ try {
 
   console.log("Después del saludo");
 } catch (err) {
-  console.log("ERROR: ", err);
+  console.log("ERROR 🫢🫢🫢🫢🫢: ", err);
   console.log("ERROR MESSAGE: ", err.message);
   console.log("ERROR TYPE OF: ", typeof err);
   console.log("ERROR TYPE OF: ", Object.keys(err));
