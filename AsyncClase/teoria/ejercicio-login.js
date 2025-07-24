@@ -23,8 +23,16 @@ function getUser(email, password, callback) {
 
   setTimeout(() => {
     const user = users.find((user) => user.email === email);
+
+    console.log("Se encontro el user ?: ", user);
+
+    console.log("Passwords: ", user.password, " | ", password);
+
     if (!user || user.password !== password) {
       const error = new Error("Credenciales invalidas!");
+
+      console.log("Error creado: ", error);
+
       callback(error);
       return;
     }
@@ -34,6 +42,7 @@ function getUser(email, password, callback) {
 }
 
 const callbackFn = (error, user) => {
+  console.log("Me llega el error ? : ", error);
   if (error) {
     console.error(error.message);
     return;
@@ -43,4 +52,31 @@ const callbackFn = (error, user) => {
 
 getUser("pepe@mail.com", "supersecret", callbackFn);
 
-getUser("pepe@mail.com", "supersecret123", callbackFn);
+//getUser("pepe@mail.com", "supersecret123", callbackFn);
+
+// TEORIA VISTA ANTES:
+
+// // function explicita
+// function nameOfFunction() {}
+
+// // funcion anonima
+// const function2 = function () {};
+
+// // Arrow Function
+// const function3 = () => {};
+
+// // CALLBACK Dif CALLSTACK
+// // Callback => Es aquella funcion , que ingresa como argumento a otra funcion
+// // Call Stack => es la pila de ejecucion que usa JS para implementar el mecanismo del EventLoop.
+
+// function calculadora(num1, num2, operacion) {
+//   return operacion(num1, num2);
+// }
+
+// const sumar = (num1, num2) => num1 + num2;
+// const restar = (num1, num2) => num1 - num2;
+// const multiplicar = (num1, num2) => num1 * num2;
+// const dividir = (num1, num2) => num1 / num2;
+
+// const test = calculadora(5, 8, restar);
+// console.log("la respuesta es: ", test);
