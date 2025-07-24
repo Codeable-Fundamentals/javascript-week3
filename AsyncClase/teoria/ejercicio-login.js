@@ -14,21 +14,25 @@ const users = [
 ];
 
 // se encargara de devolver un usuario
-function getUser(email, password) {
+function getUser(email, password, callback) {
   if (typeof email !== "string" || typeof password !== "string") {
     throw new TypeError(
       "El formato del email o de la contraseña, son invalidos"
     );
   }
 
-  const user = users.find((user) => user.email === email);
+  setTimeout(() => {
+    const user = users.find((user) => user.email === email);
+    if (!user || user.password !== password) {
+      throw new Error("Credenciales invalidas!");
+    }
 
-  if (!user || user.password !== password) {
-    throw new Error("Credenciales invalidas!");
-  }
-
-  return user;
+    callback(user);
+  }, 2000);
 }
 
-const user = getUser("pepe@mail.com", "supersecret");
-console.log("¡Bienvenid@ " + user.name + "!"); // ¡Bienvenid@ Pepe!
+const callbackFn = (user) => {
+  console.log("¡Bienvenid@ " + user.name + "!");
+};
+
+const user = getUser("pepe@mail.com", "supersecret", callbackFn);
