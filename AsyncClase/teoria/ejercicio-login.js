@@ -41,7 +41,7 @@ function getUser(email, password, callback) {
   }, 2000);
 }
 
-const callbackFn = (error, user) => {
+const cualquierNombre = (error, user) => {
   console.log("Me llega el error ? : ", error);
   console.log("Me llega el user ????: ", user)
   if (error) {
@@ -51,7 +51,7 @@ const callbackFn = (error, user) => {
   console.log("¡Bienvenid@ " + user.name + "!");
 };
 
-getUser("pepe@mail.com", "supersecret", callbackFn);
+getUser("pepe@mail.com", "supersecret", cualquierNombre);
 
 //getUser("pepe@mail.com", "supersecret123", callbackFn);
 
