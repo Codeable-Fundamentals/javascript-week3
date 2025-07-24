@@ -43,6 +43,7 @@ function getUser(email, password, callback) {
 
 const callbackFn = (error, user) => {
   console.log("Me llega el error ? : ", error);
+  console.log("Me llega el user ????: ", user)
   if (error) {
     console.error(error.message);
     return;
