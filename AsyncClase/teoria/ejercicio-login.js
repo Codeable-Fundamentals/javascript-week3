@@ -24,15 +24,23 @@ function getUser(email, password, callback) {
   setTimeout(() => {
     const user = users.find((user) => user.email === email);
     if (!user || user.password !== password) {
-      throw new Error("Credenciales invalidas!");
+      const error = new Error("Credenciales invalidas!");
+      callback(error);
+      return;
     }
 
-    callback(user);
+    callback(null, user);
   }, 2000);
 }
 
-const callbackFn = (user) => {
+const callbackFn = (error, user) => {
+  if (error) {
+    console.error(error.message);
+    return;
+  }
   console.log("¡Bienvenid@ " + user.name + "!");
 };
 
-const user = getUser("pepe@mail.com", "supersecret", callbackFn);
+getUser("pepe@mail.com", "supersecret", callbackFn);
+
+getUser("pepe@mail.com", "supersecret123", callbackFn);
