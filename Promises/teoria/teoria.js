@@ -7,6 +7,10 @@ let promise = new Promise(function (resolve, reject) {
 });
 
 // ejemplod de una promesa que salio mal
-let promise_error = new Promise(function (resolve, reject) {
-  setTimeout(() => reject(new Error("algo salio mal :c ")), 1000);
-});
+// let promise_error = new Promise(function (resolve, reject) {
+//   setTimeout(() => reject(new Error("algo salio mal :c ")), 1000);
+// });
+
+console.log(promise)
+console.log(promise.status)
+console.log(promise.result)
