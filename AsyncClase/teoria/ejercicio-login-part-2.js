@@ -24,6 +24,24 @@ const githubPublicRepos = [
   { id: 5, owner: "anita-dev", name: "example" },
 ];
 
+const listadePrporcadaRepo = [
+  {
+    id: "hello-world",
+    pr_name: "update data SQL",
+    is_merge: true,
+  },
+  {
+    id: "hello-world",
+    pr_name: "create API ",
+    is_merge: true,
+  },
+  {
+    id: "hello-world",
+    pr_name: "remove user",
+    is_merge: false,
+  },
+];
+
 function getUser(email, password, callback) {
   setTimeout(() => {
     const user = users.find((u) => u.email === email);
@@ -74,6 +92,16 @@ function start() {
       }
       console.log("Tus repositorios de Github:");
       repos.forEach((repo) => console.log(repo.name));
+
+      // simular la obtención de PRs
+      console.warn("Loading PRs for repos...");
+      getPRsForRepos(repos, function (error, prList) {
+        if (error) {
+          console.error(error.message);
+          return;
+        }
+        console.log("Lista de PRs:", prList);
+      });
     });
   });
 }
