@@ -8,7 +8,7 @@ let promise = new Promise(function (resolve, reject) {
 
 // ejemplod de una promesa que salio mal
 let promise_error = new Promise(function (resolve, reject) {
-  setTimeout(() => reject(new Error("algo salio mal :c ")), 1000);
+  setTimeout(() => reject(new Error("Whoops!"), 1000));
 });
 
 console.log(promise);
@@ -21,19 +21,19 @@ console.log(promise.result);
 promise.then(
   function (result) {
     /*Caso exito */
-    console.log("Resultado de la promesa: ", result);
+    console.log("Resultado bueno: ", result);
   },
   function (error) {
     /* Caso rechazo */
-    console.log("Resultado erroneo de la promesa: ", error);
+    console.log("Resultado malo: ", error);
   }
 );
 
 promise_error.then(
   function (result) {
-    console.log("Resultado exitoso: ", result);
+    console.log("Resultado bueno: ", result);
   },
   function (error) {
-    console.log("Resultado erroneo: ", error);
+    console.log("Resultado malo: ", error.message);
   }
 );
