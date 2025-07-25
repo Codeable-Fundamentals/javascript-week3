@@ -1,4 +1,4 @@
-const prompt = require('prompt-sync')();
+const prompt = require("prompt-sync")();
 
 const users = [
   {
@@ -18,6 +18,7 @@ const users = [
 const githubPublicRepos = [
   { id: 1, owner: "pepe-20", name: "hello-world" },
   { id: 2, owner: "pepe-20", name: "say-hi" },
+  { id: 6, owner: "pepe-20", name: "my-first-web-page" },
   { id: 3, owner: "anita-dev", name: "first-repo" },
   { id: 4, owner: "anita-dev", name: "codeable" },
   { id: 5, owner: "anita-dev", name: "example" },
