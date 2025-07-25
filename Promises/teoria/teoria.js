@@ -6,3 +6,7 @@ let promise = new Promise(function (resolve, reject) {
   setTimeout(() => resolve("done"), 1000);
 });
 
+// ejemplod de una promesa que salio mal
+let promise_error = new Promise(function (resolve, reject) {
+  setTimeout(() => reject(new Error("algo salio mal :c ")), 1000);
+});
