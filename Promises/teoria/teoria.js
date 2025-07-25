@@ -18,6 +18,8 @@ console.log(Object.getPrototypeOf(promise));
 
 console.log(promise.result);
 
+console.log("----------------- PROMESA EXITOSA -------------")
+
 promise.then(
   function (result) {
     /*Caso exito */
@@ -29,6 +31,7 @@ promise.then(
   }
 );
 
+console.log("----------------- PROMESA ERRONEA -------------")
 promise_error.then(
   function (result) {
     console.log("Resultado bueno: ", result);
