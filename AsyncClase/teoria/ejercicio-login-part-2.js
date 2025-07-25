@@ -107,3 +107,10 @@ function start() {
 }
 
 start();
+
+// Callback hell:
+// este ejemplo muestra cómo se pueden anidar múltiples callbacks,
+// lo que puede dificultar la lectura y el mantenimiento del código.
+
+// La definiciond e Callback Hell es cuando tenemos un callback dentro de otro callback,
+// y así sucesivamente, lo que puede llevar a un código difícil de leer y mantener.
