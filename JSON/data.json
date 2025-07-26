@@ -1,0 +1,10 @@
+{
+  "name": "Grecia",
+  "age": 25,
+  "isSingle": false,
+  "isMarried": false,
+  "parentsData": {
+    "motherName": "Carmen",
+    "faterName": "Mauricio"
+  }
+}
