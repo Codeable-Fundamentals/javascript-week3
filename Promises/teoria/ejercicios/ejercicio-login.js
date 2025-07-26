@@ -12,6 +12,12 @@ const users = [
     name: "Ana",
     githubUsername: "anita-dev",
   },
+   {
+    email: "grecia@gmail.com",
+    password: "123456",
+    name: "Grecia",
+    githubUsername: "grecia-dev",
+  },
 ];
 
 // Simulamos una base de datos de repositorios
@@ -21,6 +27,7 @@ const githubPublicRepos = [
   { id: 3, owner: "anita-dev", name: "first-repo" },
   { id: 4, owner: "anita-dev", name: "codeable" },
   { id: 5, owner: "anita-dev", name: "example" },
+  { id: 6, owner: "pepe-20", name: "my-first-web-page" },
 ];
 
 // ========================================
@@ -62,6 +69,7 @@ function atenticarUsuario(email, password) {
 
 function obtenerRepos(githubUsername) {
   return new Promise((resolve, reject) => {
+    // Simulamos la conexion al servidor de Github
     setTimeout(() => {
       const repositoriosUsuario = githubPublicRepos.filter(
         (repo) => repo.owner === githubUsername
@@ -77,32 +85,50 @@ function obtenerRepos(githubUsername) {
   });
 }
 
-
 // ========================================
 // EJEMPLO 1: Proceso completo exitoso
 // ========================================
 
 atenticarUsuario("pepe@mail.com", "supersecret")
-  .then(usuario => {
+  .then((usuario) => {
     console.log(`✅ Usuario autenticado: ${usuario.name}`);
     console.log(`👤 GitHub: ${usuario.githubUsername}`);
-    
+
     // Una vez autenticado, buscamos sus repositorios
-    return buscarRepositorios(usuario.githubUsername);
+    return obtenerRepos(usuario.githubUsername);
   })
-  .then(repositorios => {
+  .then((repositorios) => {
     console.log(`📊 Repositorios encontrados: ${repositorios.length}`);
-    repositorios.forEach(repo => {
+    repositorios.forEach((repo) => {
       console.log(`   📁 ${repo.name} (ID: ${repo.id})`);
     });
   })
-  .catch(error => {
+  .catch((error) => {
     console.log(`🚫 Error en el proceso: ${error}`);
   })
   .finally(() => {
     console.log("🏁 Proceso de autenticación y búsqueda completado");
   });
 
-  // ========================================
+// ========================================
 // EJEMPLO 2: Proceso con error
 // ========================================
+atenticarUsuario("grecia@gmail.com", "123456")
+  .then((usuario) => {
+    console.log(`✅ Usuario autenticado: ${usuario.name}`);
+    console.log(`👤 GitHub: ${usuario.githubUsername}`);
+
+    return obtenerRepos(usuario.githubUsername);
+  })
+  .then((repositorios) => {
+    console.log(`📊 Repositorios encontrados: ${repositorios.length}`);
+    repositorios.forEach((repo) => {
+      console.log(`   📁 ${repo.name} (ID: ${repo.id})`);
+    });
+  })
+  .catch((error) => {
+    console.log(`🚫 Error en el proceso: ${error}`);
+  })
+  .finally(() => {
+    console.log("🏁 Proceso de autenticación y búsqueda completado");
+  });
