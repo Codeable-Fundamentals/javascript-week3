@@ -1,10 +1,20 @@
 {
   "name": "Grecia",
   "age": 25,
+  "sueldo": 1500000.22,
+  "bankNumber": null,
   "isSingle": false,
   "isMarried": false,
   "parentsData": {
     "motherName": "Carmen",
     "faterName": "Mauricio"
-  }
+  },
+  "platosfavoritos": [
+    "arroz con pollo",
+    "aji de gallina",
+    "anticucho",
+    "suspiro ala limena",
+    "chpe de camaron",
+    "pastel de papa"
+  ]
 }
