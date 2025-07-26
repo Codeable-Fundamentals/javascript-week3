@@ -25,17 +25,26 @@ function prepararPizza(ingrediente) {
 }
 
 // Caso 1: El usurio si manda una pizza de sabor valido
-prepararPizza("piña")
-  .then((pizza) => {
-    console.log(pizza);
-  })
-  .catch((error) => {
-    console.log(error);
-  })
-  .finally(() => console.log("Gracias por peferrir en Pizzas Lima!"));
+// prepararPizza("piña")
+//   .then((pizza) => {
+//     console.log(pizza);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+//   .finally(() => console.log("Gracias por peferrir en Pizzas Lima!"));
 
 // caso 2: Error Si andamos una pizza fuera del catalogo
-prepararPizza("🐟")
-  .then((pizza) => console.log(pizza))
-  .catch((error) => console.log(error))
+// prepararPizza("🐟")
+//   .then((pizza) => console.log(pizza))
+//   .catch((error) => console.log(error))
+//   .finally(() => console.log("Gracias por peferrir en Pizzas Lima!"));
+
+// caso 3 : Error en el fetch
+prepararPizza("salame")
+  .then((pizza) => {
+    console.log(pizza);
+    throw new Error("Whoops! algio salio mal");
+  })
+  .catch((error) => console.log("❌ Mensaje de error : ", error.message))
   .finally(() => console.log("Gracias por peferrir en Pizzas Lima!"));
