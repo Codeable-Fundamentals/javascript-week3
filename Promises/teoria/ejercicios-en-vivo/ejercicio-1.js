@@ -1,6 +1,6 @@
 function prepararPizza(ingrediente) {
   return new Promise((resolve, reject) => {
-    console.log(`🏁 La pizza de ${ingrediente} se esta preparando...`);
+    console.log(`🏁 La pizza 🍕 de ${ingrediente} se esta preparando...`);
 
     const ingredientesValidos = [
       "peperoni",
@@ -32,10 +32,10 @@ prepararPizza("piña")
   .catch((error) => {
     console.log(error);
   })
-  .finally(() => console.log("Gracias por pedir en Pizzas Lima!"));
+  .finally(() => console.log("Gracias por peferrir en Pizzas Lima!"));
 
 // caso 2: Error Si andamos una pizza fuera del catalogo
-prepararPizza("cerdo")
+prepararPizza("🐟")
   .then((pizza) => console.log(pizza))
   .catch((error) => console.log(error))
-  .finally(() => console.log("Gracias por pedir en Pizzas Lima!"));
+  .finally(() => console.log("Gracias por peferrir en Pizzas Lima!"));
